@@ -4,7 +4,7 @@ Gem::Specification.new do |s|
 
   s.name = 'rack-contrib'
   s.version = '0.9.1'
-  s.date = '2009-03-07'
+  s.date = '2009-05-10'
 
   s.description = "Contributed Rack Middleware and Utilities"
   s.summary     = "Contributed Rack Middleware and Utilities"
@@ -28,6 +28,7 @@ Gem::Specification.new do |s|
     lib/rack/contrib/etag.rb
     lib/rack/contrib/evil.rb
     lib/rack/contrib/garbagecollector.rb
+    lib/rack/contrib/host_meta.rb
     lib/rack/contrib/jsonp.rb
     lib/rack/contrib/lighttpd_script_name_fix.rb
     lib/rack/contrib/locale.rb
@@ -35,6 +36,7 @@ Gem::Specification.new do |s|
     lib/rack/contrib/nested_params.rb
     lib/rack/contrib/not_found.rb
     lib/rack/contrib/post_body_content_type_parser.rb
+    lib/rack/contrib/probably_versioned.rb
     lib/rack/contrib/proctitle.rb
     lib/rack/contrib/profiler.rb
     lib/rack/contrib/relative_redirect.rb
@@ -47,6 +49,7 @@ Gem::Specification.new do |s|
     test/404.html
     test/Maintenance.html
     test/mail_settings.rb
+    test/spec_helper.rb
     test/spec_rack_accept_format.rb
     test/spec_rack_backstage.rb
     test/spec_rack_callbacks.rb
@@ -57,12 +60,14 @@ Gem::Specification.new do |s|
     test/spec_rack_etag.rb
     test/spec_rack_evil.rb
     test/spec_rack_garbagecollector.rb
+    test/spec_rack_host_meta.rb
     test/spec_rack_jsonp.rb
     test/spec_rack_lighttpd_script_name_fix.rb
     test/spec_rack_mailexceptions.rb
     test/spec_rack_nested_params.rb
     test/spec_rack_not_found.rb
     test/spec_rack_post_body_content_type_parser.rb
+    test/spec_rack_probably_versioned.rb
     test/spec_rack_proctitle.rb
     test/spec_rack_profiler.rb
     test/spec_rack_relative_redirect.rb
