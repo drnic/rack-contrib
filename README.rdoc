@@ -42,6 +42,8 @@ interface:
   it convenient for putting up maintenance pages.
 * Rack::Format - Adds a format extension at the end of the URI when there is none, corresponding to the mime-type given in the Accept HTTP header.
 * Rack::HostMeta - Configures /host-meta using a block
+* Rack::ProbablyVersioned - Supports a /v1/ prefix to all routes; removing it and 
+  forwarding remaining route to remainder of app.
 
 === Use
 

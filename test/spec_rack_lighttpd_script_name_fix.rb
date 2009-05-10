@@ -1,4 +1,4 @@
-require 'test/spec'
+require File.dirname(__FILE__) + '/spec_helper'
 require 'rack/mock'
 require 'rack/contrib/lighttpd_script_name_fix'
 
