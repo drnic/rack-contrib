@@ -25,6 +25,8 @@ interface:
   from file.
 * Rack::Signals - Installs signal handlers that are safely processed after
   a request
+* Rack::StaticCache - Modifies the response headers to facilitiate client and proxy caching for
+  static files that minimizes http requests and improves overall load times for second time visitors.
 * Rack::TimeZone - Detects the clients timezone using JavaScript and sets
   a variable in Rack's environment with the offset from UTC.
 * Rack::Evil - Lets the rack application return a response to the client from any place.
@@ -40,8 +42,9 @@ interface:
   absolute URLs.
 * Rack::Backstage - Returns content of specified file if it exists, which makes
   it convenient for putting up maintenance pages.
-* Rack::Format - Adds a format extension at the end of the URI when there is none, corresponding to the mime-type given in the Accept HTTP header.
+* Rack::AcceptFormat - Adds a format extension at the end of the URI when there is none, corresponding to the mime-type given in the Accept HTTP header.
 * Rack::HostMeta - Configures /host-meta using a block
+* Rack::Cookies - Adds simple cookie jar hash to env
 * Rack::ProbablyVersioned - Supports a /v1/ prefix to all routes; removing it and 
   forwarding remaining route to remainder of app.
 

@@ -24,20 +24,22 @@ module Rack
   # MIT-License - Cyril Rohr
   #
   class AcceptFormat
-    # Constants
-    DEFAULT_EXTENSION = ".html"
 
-    def initialize(app)
+    def initialize(app, default_extention = '.html')
+      @ext = default_extention.to_s.strip
+      @ext = ".#{@ext}" unless @ext[0] == ?.
       @app = app
     end
 
     def call(env)
       req = Rack::Request.new(env)
-      unless req.path_info =~ /(.*)\.(.+)/
-        accept = env['HTTP_ACCEPT'].scan(/[^;,\s]*\/[^;,\s]*/)[0] rescue ""
-        extension =  Rack::Mime::MIME_TYPES.invert[accept] || DEFAULT_EXTENSION
+
+      if ::File.extname(req.path_info).empty?
+        accept = env['HTTP_ACCEPT'].to_s.scan(/[^;,\s]*\/[^;,\s]*/)[0].to_s
+        extension =  Rack::Mime::MIME_TYPES.invert[accept] || @ext
         req.path_info = req.path_info+"#{extension}"
       end
+
       @app.call(env)
     end
   end

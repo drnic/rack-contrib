@@ -7,7 +7,9 @@ module Rack
     end
   end
 
+  autoload :AcceptFormat,               "rack/contrib/accept_format"
   autoload :BounceFavicon,              "rack/contrib/bounce_favicon"
+  autoload :Cookies,                    "rack/contrib/cookies"
   autoload :CSSHTTPRequest,             "rack/contrib/csshttprequest"
   autoload :Deflect,                    "rack/contrib/deflect"
   autoload :ETag,                       "rack/contrib/etag"
@@ -29,4 +31,5 @@ module Rack
   autoload :NotFound,                   "rack/contrib/not_found"
   autoload :ResponseCache,              "rack/contrib/response_cache"
   autoload :RelativeRedirect,           "rack/contrib/relative_redirect"
+  autoload :StaticCache,           	"rack/contrib/static_cache"
 end
